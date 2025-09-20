@@ -1,7 +1,10 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 
 const PostDetail = () => {
+    const {postId} = useParams();
+    console.log(postId);
+    
     const post = useLoaderData();
     console.log(post);
     const navigate = useNavigate();
